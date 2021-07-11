@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSP - Hello World</title>
+</head>
+<body>
+<h1>Learning how to code java Enterprise Applications</h1>
+<h4>Because am <span style="color: aqua">{0}</span></h4>
+<h3>1. Serving plain html</h3>
+<h3>2. Using web.xml for servlet url mapping configuration</h3>
+<h5>I was today year old when I learned that</h5>
+<h5>
+    <em>The form action attribute is used to specify where we want to send the form data when the form is submitted. So the value of the action is the page that will process the form.</em></br>
+    <em>If you have a form tag without an action attribute then the data will be sent to its own page for processing.</em></br>
+    <em>You should make sure the web resource to which the action attribute points accepts whatever method you have specified in your method attribute(post/get).</em>
+</h5>
+<h2>Current User</h2>
+<form method="post">
+    <label style="margin: 5px 15px 5px 20px;">First Name</label>
+    <input style="margin: 5px 15px 5px 20px;" name="fname" type="text" id="fname" placeholder=""/></br>
+    <label style="margin: 5px 15px 5px 20px;">Last Name</label>
+    <input style="margin: 5px 15px 5px 20px;" name="lname" type="text" id="lname" placeholder=""/></br>
+    <label style="margin: 5px 10px 5px 20px;">Greatest Hobby</label>
+    <input style="margin: 5px 20px 5px 20px;" name="hobby" type="text" id="hobby" placeholder=""/></br>
+    <input style="margin: 5px 20px 5px 20px;" type="submit" value="Submit" id="submit"/>
+</form>
+<h2>The Current User is:</h2>
+<h4>Name: <em style="color: aqua">{1}</em></h4>
+<h4>Passion: <em style="color: aqua">{2}</em></h4>
+</body>
+</html>
