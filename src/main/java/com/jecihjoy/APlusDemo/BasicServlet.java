@@ -1,5 +1,7 @@
 package com.jecihjoy.APlusDemo;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,11 +12,19 @@ import java.text.MessageFormat;
 public class BasicServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        /** ServletConfig Init Params */
+        ServletConfig config = getServletConfig();
+        System.out.println("ServletConfig Init Params = " + config.getInitParameter("web-service-url"));
+
+        /** ServletContext Init Params */
+        ServletContext context = getServletContext();
+        System.out.println("ServletContext Init Params = " + context.getInitParameter("databaseUrl"));
+
+        /** Writing the html string into a web page */
         PrintWriter out = resp.getWriter();
         String yearPassed = req.getParameter("year");
         String[] values = {"A BadAss Engineer"};
         String htmlPage = getHtmlString(req.getServletContext().getRealPath("/html/basicServlet.html"), values);
-        /** Writes the html string into a web page */
         if (yearPassed == null) {
             out.write(htmlPage);
         } else {
