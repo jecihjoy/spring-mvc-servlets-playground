@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="APlusDemo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>APlusDemo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="APlusDemo-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="APlusDemo:war exploded" />
+    </root>
+  </artifact>
+</component>
