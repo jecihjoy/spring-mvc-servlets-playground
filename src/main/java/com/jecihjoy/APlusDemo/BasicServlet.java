@@ -36,7 +36,7 @@ public class BasicServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("fname")+ " " +req.getParameter("lname");
         String hobby = req.getParameter("hobby");
-        String[] values = {"a BadAss Engineer", name, hobby};
+        String[] values = {"A BadAss Engineer", name, hobby};
         String htmlContent = getHtmlString(req.getServletContext().getRealPath("/html/basicServlet.html"), values);
         resp.getWriter().write(htmlContent);
     }
