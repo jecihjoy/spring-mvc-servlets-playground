@@ -10,7 +10,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("Login Init Params " + getServletConfig().getInitParameter("URL"));
-        String html = "<html><h2><em>Please Login</em></h2></html";
+        String html = "<html><h2><em>  </em></h2></html";
         response.getWriter().write(html);
         String[] pl = {"Java", "Node js", "GraphQl", "React js"};
         request.setAttribute("pl", pl);

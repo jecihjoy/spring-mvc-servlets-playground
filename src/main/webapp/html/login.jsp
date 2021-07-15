@@ -1,13 +1,14 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.util.Calendar" %>
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" %>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Forwarding in practice</title>
 </head>
 <body>
+<%@include file="header.jsp"%>
 <form method="post">
   <label style="margin: 5px 15px 5px 20px;">First Name</label>
   <input style="margin: 5px 15px 5px 20px;" name="fname" type="text" id="fname" placeholder=""/></br>
