@@ -12,21 +12,26 @@
 <body>
 <%@include file="header.jsp" %>
 <form method="post">
-    <label style="margin: 5px 15px 5px 20px;">First Name</label>
-    <input style="margin: 5px 15px 5px 20px;" name="fname" type="text" id="fname" placeholder=""/></br>
-    <label style="margin: 5px 15px 5px 20px;">Last Name</label>
-    <input style="margin: 5px 15px 5px 20px;" name="lname" type="text" id="lname" placeholder=""/></br>
-    <input style="margin: 5px 20px 5px 20px;" type="submit" value="Submit" id="submit"/>
+    <label style="margin: 5px 15px 5px 20px;">Username</label>
+    <input style="margin: 5px 15px 5px 20px;" name="username" type="text" id="username" placeholder=""/></br>
+    <label style="margin: 5px 15px 5px 20px;">Password</label>
+    <input style="margin: 5px 15px 5px 20px;" name="password" type="text" id="password" placeholder=""/></br>
+    <input style="margin: 5px 20px 5px 20px;" type="submit" value="Login" id="login"/>
+    <a href="<%=response.encodeURL("hello-servlet")%>">Home</a>
 </form>
 
 <ol><h3><em>Favourite Programming Languages as of <%=displayDate() %>
 </em></h3>
     <%
         String[] pls = (String[]) request.getAttribute("pls");
-        for (String i : pls) { %>
-    <li><%=i%>
+        if (pls.length > 0) {
+            for (String i : pls) { %>
+    <li><%=i%>;
     </li>
-    <% } %>
+    <% }
+        ;
+    }
+        ;%>
 </ol>
 
 <ol>

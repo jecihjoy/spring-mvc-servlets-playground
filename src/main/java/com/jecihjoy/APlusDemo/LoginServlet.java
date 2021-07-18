@@ -35,7 +35,10 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String[] pl = {"Java", "Node js", "GraphQl", "React js"};
-        request.setAttribute("pl", pl);
+        request.setAttribute("pls", pl);
+        HttpSession session = request.getSession();
+        session.setAttribute("username", request.getParameter("username"));
+        System.out.println("Set session value username: " + session.getAttribute("username"));
         request.getRequestDispatcher("/html/login.jsp").include(request, response);
     }
 
