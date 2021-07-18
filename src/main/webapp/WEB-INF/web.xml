@@ -15,7 +15,7 @@
 
     <servlet-mapping>
         <servlet-name>BasicServlet</servlet-name>
-        <url-pattern>/test</url-pattern>
+        <url-pattern>/aplus-servlet</url-pattern>
     </servlet-mapping>
 
     <!-- Context Params -->

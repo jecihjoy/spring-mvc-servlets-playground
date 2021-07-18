@@ -7,7 +7,8 @@
 <body>
 <h1><%= "Hello World!" %>
 </h1>
+<h2>Let's build Enterprise Applications using java</h2>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="aplus-servlet">Aplus Servlet</a>
 </body>
 </html>
