@@ -1,4 +1,4 @@
-package com.jecihjoy.APlusDemo;
+package com.jecihjoy.APlusDemo.sevlets;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

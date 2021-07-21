@@ -1,4 +1,4 @@
-package com.jecihjoy.APlusDemo;
+package com.jecihjoy.APlusDemo.sevlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,9 +15,12 @@ public class HelloServlet extends HttpServlet {
         if (request.getParameter("logout") != null) {
             request.getSession().invalidate();
             System.out.println("Session invalidated successfully; username " + request.getSession().getAttribute("username"));
+            String[] pls = {"Java", "Node js", "GraphQl", "React js"};
+            request.setAttribute("pls", pls);
             request.getRequestDispatcher("/html/login.jsp").forward(request, response);
+        } else {
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
         }
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 
     public void destroy() {

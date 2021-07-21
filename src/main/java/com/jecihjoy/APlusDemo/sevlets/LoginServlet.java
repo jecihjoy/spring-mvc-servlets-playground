@@ -1,4 +1,4 @@
-package com.jecihjoy.APlusDemo;
+package com.jecihjoy.APlusDemo.sevlets;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -9,6 +9,8 @@ import java.util.List;
 
 @WebServlet(name = "LoginServlet", value = "/LoginServlet", initParams = @WebInitParam(name = "URL", value = "https://www.weatherservice.com/"))
 public class LoginServlet extends HttpServlet {
+    public static String USER_USERNAME = "jecihjoy";
+    public static String USER_PASSWORD = "tomcat";
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("Login Init Params " + getServletConfig().getInitParameter("URL"));
@@ -34,12 +36,17 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String[] pl = {"Java", "Node js", "GraphQl", "React js"};
-        request.setAttribute("pls", pl);
         HttpSession session = request.getSession();
         session.setAttribute("username", request.getParameter("username"));
-        System.out.println("Set session value username: " + session.getAttribute("username"));
-        request.getRequestDispatcher("/html/login.jsp").include(request, response);
+        session.setAttribute("password", request.getParameter("password"));
+        if (request.getParameter("username").equals(USER_USERNAME) && request.getParameter("password").equals(USER_PASSWORD)) {
+            System.out.println("User is validated");
+            request.getRequestDispatcher("/index.jsp").include(request, response);
+        } else {
+            String[] pls = {"Java", "Node js", "GraphQl", "React js"};
+            request.setAttribute("pls", pls);
+            request.getRequestDispatcher("/html/login.jsp").include(request, response);
+        }
     }
 
 }

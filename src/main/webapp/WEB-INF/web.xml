@@ -5,7 +5,7 @@
          version="4.0">
     <servlet>
         <servlet-name>BasicServlet</servlet-name>
-        <servlet-class>com.jecihjoy.APlusDemo.BasicServlet</servlet-class>
+        <servlet-class>com.jecihjoy.APlusDemo.sevlets.BasicServlet</servlet-class>
         
         <init-param>
             <param-name>web-service-url</param-name>

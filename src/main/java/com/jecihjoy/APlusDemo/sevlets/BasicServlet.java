@@ -1,4 +1,4 @@
-package com.jecihjoy.APlusDemo;
+package com.jecihjoy.APlusDemo.sevlets;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;

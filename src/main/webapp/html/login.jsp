@@ -17,6 +17,7 @@
     <label style="margin: 5px 15px 5px 20px;">Password</label>
     <input style="margin: 5px 15px 5px 20px;" name="password" type="text" id="password" placeholder=""/></br>
     <input style="margin: 5px 20px 5px 20px;" type="submit" value="Login" id="login"/>
+    <!--SESSION MANAGEMENT WITH URL REWRITING-->
     <a href="<%=response.encodeURL("hello-servlet")%>">Home</a>
 </form>
 
