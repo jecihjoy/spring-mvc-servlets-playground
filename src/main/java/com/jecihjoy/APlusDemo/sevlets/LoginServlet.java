@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "LoginServlet", value = "/LoginServlet", initParams = @WebInitParam(name = "URL", value = "https://www.weatherservice.com/"))
+//@WebServlet(name = "LoginServlet", value = "/LoginServlet", initParams = @WebInitParam(name = "URL", value = "https://www.weatherservice.com/"))
 public class LoginServlet extends HttpServlet {
     public static String USER_USERNAME = "jecihjoy";
     public static String USER_PASSWORD = "tomcat";
