@@ -1,13 +1,14 @@
-package com.jecihjoy.APlusDemo.sevlets;
+package com.jecihjoy.APlusDemo.servlets;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-//@WebServlet(name = "LoginServlet", value = "/LoginServlet", initParams = @WebInitParam(name = "URL", value = "https://www.weatherservice.com/"))
+@WebServlet(name = "LoginServlet", value = "/LoginServlet", initParams = @WebInitParam(name = "URL", value = "https://www.weatherservice.com/"))
 public class LoginServlet extends HttpServlet {
     public static String USER_USERNAME = "jecihjoy";
     public static String USER_PASSWORD = "tomcat";

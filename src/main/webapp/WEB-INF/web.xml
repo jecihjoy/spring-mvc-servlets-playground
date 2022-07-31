@@ -20,16 +20,30 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Bug</servlet-name>
+        <servlet-class>com.jecihjoy.APlusDemo.servlets.TomcatBugServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Bug</servlet-name>
+        <url-pattern>/bug</url-pattern>
+    </servlet-mapping>
 
-<!--    <servlet>-->
-<!--        <servlet-name>BasicServlet</servlet-name>-->
-<!--        <servlet-class>com.jecihjoy.APlusDemo.sevlets.BasicServlet</servlet-class>-->
-<!--        -->
-<!--        <init-param>-->
-<!--            <param-name>web-service-url</param-name>-->
-<!--            <param-value>https://www.weatherservice.com/</param-value>-->
-<!--        </init-param>-->
-<!--    </servlet>-->
+
+    <servlet>
+        <servlet-name>BasicServlet</servlet-name>
+        <servlet-class>com.jecihjoy.APlusDemo.servlets.BasicServlet</servlet-class>
+
+        <init-param>
+            <param-name>web-service-url</param-name>
+            <param-value>https://www.weatherservice.com/</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BasicServlet</servlet-name>
+        <url-pattern>/aplus-servlet</url-pattern>
+    </servlet-mapping>
 
     <!-- WEB FILTER CONFIGURATION --><!--
     <filter>
@@ -41,15 +55,14 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>-->
 
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>BasicServlet</servlet-name>-->
-<!--        <url-pattern>/aplus-servlet</url-pattern>-->
-<!--    </servlet-mapping>-->
-
 <!--    &lt;!&ndash; Context Params &ndash;&gt;-->
 <!--    <context-param>-->
 <!--        <param-name>databaseUrl</param-name>-->
 <!--        <param-value>jdbc:mysql://localhost:3306/aplus</param-value>-->
 <!--    </context-param>-->
-    
+
+    <context-param>
+        <param-name>BUG_HOME</param-name>
+        <param-value>/var/lib/tomcat8/webapps/APlusDemo_war</param-value>
+    </context-param>
 </web-app>

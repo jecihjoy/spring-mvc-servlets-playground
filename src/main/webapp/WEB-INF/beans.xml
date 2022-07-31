@@ -10,4 +10,32 @@
 
     <mvc:annotation-driven/>
 
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="defaultViews">
+            <list>
+                <ref bean="jsonView"/>
+                <ref bean="xmlView"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+        <property name="prettyPrint" value="true"/>
+    </bean>
+
+    <bean id="xmlView" class="org.springframework.web.servlet.view.xml.MappingJackson2XmlView">
+    </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.jecihjoy.APlusDemo.interceptors.ProcessingTimeInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>
